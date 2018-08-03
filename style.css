@@ -1,0 +1,158 @@
+/* BASIC STYLES */
+
+* { margin: 0; }
+
+html, body { height: 100%; width: 100%; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Luckiest Guy", cursive; }
+
+p, li, a { font-family: Lato, sans-serif; }
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: block;
+}
+
+.emph { font-weight: 700; color: rebeccapurple; }
+
+
+
+/* SECTIONS */
+section, footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    
+}
+
+
+
+/* cover */
+.cover {
+    background-image: url(img/coverimg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+    .cover h1.title { font-size: 64px; color: #fff; text-align: center; }
+    @media screen and (min-width: 768px) {
+        .cover h1.title { font-size: 96px; }
+    }
+
+    .cover h2.subtitle {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+
+/* intro */
+.intro {  }
+
+    .intro-block { display: block; align-items: center; }
+
+    .intro-block-main {  }
+
+    .intro-block-img { width: 80%; margin: 20px auto 0 auto; }
+
+    .intro h3 { font-size: 40px; text-align: center; }
+
+    .intro img { display: block; width: 70%; height: auto; margin: 10px auto 20px auto; }
+
+    .intro p { padding: 10px 20px; font-size: 18px; line-height: 1.5; }
+
+    .intro .wrapper > div:not(:first-child) { margin-top: 80px; }
+
+    @media screen and (min-width: 768px) {
+    .intro h3 { font-size: 32px; margin-top: 0; }
+    .intro img { margin: 0; width: 100%; }
+    .intro-block { display: flex; }
+    .intro-block-main { flex: 3; padding: 0 30px; }
+    .intro-block-img { flex: 2; margin-top: 0; }
+    .intro .wrapper div:not(:first-child) .intro-block-img { margin-top: 0; }
+    .intro-block-2 .intro-block-main { order: 1; }
+    .intro-block-2 .intro-block-img { order: 0; }
+}
+
+
+
+/* reviews */
+.reviews {
+    background-image: url(img/tiltedcloseblur.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+    .reviews .wrapper { box-sizing: content-box;}
+    .reviews h2 { color: #fff; font-size: 54px; text-align: center; }
+    .reviews-container { display: flex; flex-flow: column nowrap; margin-top: 30px }
+
+    .review-block { 
+        flex: 1 1 100%; 
+        padding: 15px 25px; 
+        background-color: hsla(0, 0%, 100%, 0.3); 
+        color: #fff; 
+        border-radius: 20px;
+        margin-bottom: 30px;
+        transition: all 0.5s ease;
+        display: flex;
+        align-content: center;
+        border: 3px solid #fff;
+    }
+    .review-block h3 { font-size: 28px; display: block; }
+    .review-block:hover { transform: scale(1.03); box-shadow: 4px 4px 10px #222; }
+
+    .review-block-main { flex: 2 2 0; padding-right: 20px; display: flex; flex-flow: column nowrap; justify-content: center; }
+
+    .review-block-img { flex: 1 1 0; }
+    .review-block-img img { 
+        width: 100%; 
+        border-radius: 100%; 
+        border: 3px solid #fff; 
+    }
+
+    @media screen and (min-width: 768px) {
+        .reviews-container { flex-flow: row wrap; justify-content: space-between; align-content: space-between; }
+        .review-block { flex: 0 0 47%; box-sizing: border-box; }
+    }
+
+
+
+/* share */
+.share { background-color: #fff; padding: 40px 0; }
+
+    .share .wrapper { display: flex; flex-flow: column; align-items: center; }
+
+    .share h2 { font-size: 28px; text-align: center; }
+
+    .share .social { display: flex; justify-content: space-between; width: 60%; margin-top: 20px; }
+    @media screen and (min-width: 768px) { 
+        .share .social { width: 30%; }
+    }
+    
+    .share .social-icon a i { color: #000; font-size: 32px; transition: all 0.5s ease; }
+    .share .social-icon a:visited { color: #000; }
+    .share .social-icon a:active { color: #000; }
+    .share .social-icon a i:hover { transform: scale(1.2); }
+    .share .social-icon a i.fa-instagram:hover { color: #fbad50; }
+    .share .social-icon a i.fa-twitter:hover { color: #1da1f2; }
+    .share .social-icon a i.fa-github:hover { color: #000; transform: scale(1.5) rotate(360deg); }
+    .share .social-icon a i.fa-discord:hover { color: #7289da; }
+    .share .social-icon a i.fa-facebook-f:hover { color: #3b5998; }
